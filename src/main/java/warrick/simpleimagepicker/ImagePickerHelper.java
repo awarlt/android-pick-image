@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
@@ -39,9 +40,11 @@ public class ImagePickerHelper {
         this.activity = activity;
     }
 
-    private HashMap<Integer, Pair<PickImageResult, Uri>> pickRequests = new HashMap<>();
+    // These are static to prevent state loss on activity restarts
+    private static HashMap<Integer, Pair<PickImageResult, Uri>> pickRequests = new HashMap<>();
 
-    private HashMap<Integer, PickImageResult> permissionRequests = new HashMap<>();
+    // These are static to prevent state loss on activity restarts
+    private static HashMap<Integer, PickImageResult> permissionRequests = new HashMap<>();
 
     /**
      * Returns true if the user has granted camera permissions, which allows this app to take photos
@@ -101,6 +104,7 @@ public class ImagePickerHelper {
         // Add the image request to the list of requests
         pickRequests.put(requestCode, new Pair<>(resultCallback, takePhotoFileUri));
     }
+
 
     /**
      * This must be called to
