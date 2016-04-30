@@ -3,9 +3,7 @@ Library to make it easier to pick or take images inside an android app.
 This simple android module makes it easy to provide means for users in your app to pick an existing photo, or take a new photo and handles requesting user permissions for taking photos.
 
 ## Installation
-In android studio projects, you can include this library by pasting the following line into your gradle dependancies section:
-
-`compile 'com.github.awarlt1.aandroid-pick-image:+'`
+You will need to download the code, and add the module as a dependancy in android studio.
 
 You should then create an instance of `ImagePickerHelper` as a member variable of the activity that you will be picking an image from. For example, in `onCreate`:
 
