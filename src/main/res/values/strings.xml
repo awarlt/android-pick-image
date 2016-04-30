@@ -1,0 +1,10 @@
+<resources>
+    <!-- The title of the dialog telling the user why they need to grant camera and storage permissions -->
+    <string name="request_permission_dialog_title">Camera permission</string>
+    <!-- The message in the dialog telling the user why they need to grant camera and storage permissions -->
+    <string name="request_permission_dialog_message">To take a photo you need to allow the camera and storage permissions. You will still be able to pick an existing photo.</string>
+    <!-- The text on the button that lets the user ignore not having the camera permissions -->
+    <string name="request_permission_dialog_continue">Continue</string>
+    <!-- The text on the dialog button that lets the user accept the permissions again after they denied them -->
+    <string name="request_permission_dialog_tryagain">"Grant permissions"</string>
+</resources>
